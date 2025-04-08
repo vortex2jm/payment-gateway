@@ -27,7 +27,7 @@ func NewAccountRepository(db *sql.DB) *AccountRepository {
 // - An error if the operation fails, otherwise nil.
 func (r *AccountRepository) Save(account *domain.Account) error {
 	stmt, err := r.db.Prepare(`
-		INSERT INTO accounts (id, name, email, api_ke, balance, created_at, updated_at)
+		INSERT INTO accounts (id, name, email, api_key, balance, created_at, updated_at)
 		VALUES ($1, $2, $3, $4, $5, $6, $7)
 	`)
 	if err != nil {

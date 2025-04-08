@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
 	"github.com/vortex2jm/go-payment-gateway/internal/repository"
 	"github.com/vortex2jm/go-payment-gateway/internal/service"
 	"github.com/vortex2jm/go-payment-gateway/internal/web/server"
